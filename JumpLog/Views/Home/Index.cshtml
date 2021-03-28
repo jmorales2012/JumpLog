@@ -1,0 +1,145 @@
+﻿@{
+    ViewData["Title"] = "Jump Log Tracker";
+}
+
+<!--
+    Obective:
+    - Keep track of jump logs online instead of by paper
+
+    User Interface:
+    - List of people in your company similar to PERSTAT
+    - Name, Last Jump Details,
+
+    Be able to:
+    - Search for individuals
+    - Add, edit, delete, archive, transfer individuals
+    - Reassign soldier to new company, unit, battalion
+    - Add, edit, delete jumps
+        - When jump added reflects on pay calendar to show currency
+    - Upload documents for each individual that explains exception in jump status
+        - Deployment, COVID, etc.
+    - Email jump info to new unit
+    - Filter list by jump date, delinquency, duty
+    - Alerts when guys are delinquent or coming soon (sent to Air NCOIC)
+
+
+    Base Functionality:
+    - Start with company-level database
+    - Search, add, edit, remove guys
+    - View soldier's jump overview
+    - Add individual jump
+        - Date, time, bird, airfield, parachute, duty
+    - Update pay status for soldier
+        - Create method to keep track of pay status
+    - Filter view based on dates, delinquency, duties
+
+
+    Technology:
+    - Frontend - HTML/CSS/JavaScript
+    - Backend - C#
+    - Database - SQL Server
+
+    Notes from Alex
+    - SQL Lite - easy to use, not very good with enterprise apps
+    - SQL Server - good for enterprise use
+    - Entity Framework - makes connecting app to database simpler
+    - .NET Core vs .NET Framework - Core is newer and cross-platform, MSFT recommends .Net Core if given the choice
+    - Don't worry about having to redesign app later on as you learn more
+
+    Github Notes
+    - Clone this repository to your computer
+    - 'git branch <name of branch>'
+        - Creates a branched copy for you to work with
+    - 'git checkout <name of branch>'
+        - Switches to the new branch for you
+    - 'git merge main'
+        - Merges any changes to the main repo with the branched repo
+    - 'git status'
+        - Shows files that have been changed but not committed to github
+    - 'git commit -m "message you want to write for this commit"'
+        - Saves your changes in git with the message you give
+    - 'git push -u origin <name of branch>'
+        - Sends your branch up to github
+    - On github you can then:
+        - Review changes and compare to main repo
+        - Leave notes for person who sent up the changes
+        - Merge changes into main
+    - Once merged, in your own terminal do:
+        - 'git checkout main' to switch back to the main repo
+        - 'git pull' to download any changes and update your copy of the main repo
+
+
+    Next Meeting Tasks
+    - Restricted access before logins
+    - Forms create dummy data in javascript
+    - Main form use info from javascript
+-->
+
+
+<div class="">
+    <h1 class="display-4">Jump Log Tracker</h1>
+    <p>Keep track of jump records including the following:</p>
+    <ul>
+        <li>Name</li>
+        <li>Date</li>
+        <li>Location</li>
+        <li>Duty Status</li>
+        <li>Aircraft</li>
+        <li>Parachute</li>
+        <li>Type of Jump</li>
+    </ul>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Last</th>
+            <th scope="col">First</th>
+            <th scope="col">Rank</th>
+            <th scope="col">DOD ID</th>
+            <th scope="col">SSN</th>
+            <th scope="col">Company</th>
+            <th scope="col">Platoon</th>
+            <th scope="col">Date Arrived</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Morales</td>
+            <td>Josh</td>
+            <td>SPC</td>
+            <td>12345678</td>
+            <td>12345678</td>
+            <td>C</td>
+            <td>1</td>
+            <td>3/27/2021</td>
+        </tr>
+        <tr>
+            <th scope="row">1</th>
+            <td>Good</td>
+            <td>Zachary</td>
+            <td>SGT</td>
+            <td>24356356</td>
+            <td>34563345</td>
+            <td>C</td>
+            <td>1</td>
+            <td>3/27/2021</td>
+        </tr>
+        <tr>
+            <th scope="row">1</th>
+            <td>Dorsey</td>
+            <td>Joe</td>
+            <td>SPC</td>
+            <td>98765487</td>
+            <td>74181265</td>
+            <td>C</td>
+            <td>1</td>
+            <td>3/27/2021</td>
+        </tr>
+        
+    </tbody>
+</table>
+
+
