@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/josh/Projects/JumpLog/JumpLog/JumpLog.csproj": {}
+    "/Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/JumpLog.csproj": {}
   },
   "projects": {
-    "/Users/josh/Projects/JumpLog/JumpLog/JumpLog.csproj": {
+    "/Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/JumpLog.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/josh/Projects/JumpLog/JumpLog/JumpLog.csproj",
+        "projectUniqueName": "/Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/JumpLog.csproj",
         "projectName": "JumpLog",
-        "projectPath": "/Users/josh/Projects/JumpLog/JumpLog/JumpLog.csproj",
+        "projectPath": "/Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/JumpLog.csproj",
         "packagesPath": "/Users/josh/.nuget/packages/",
-        "outputPath": "/Users/josh/Projects/JumpLog/JumpLog/obj/",
+        "outputPath": "/Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/josh/.config/NuGet/NuGet.Config"

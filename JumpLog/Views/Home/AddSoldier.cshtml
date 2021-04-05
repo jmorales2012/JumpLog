@@ -1,19 +1,30 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@{
     ViewData["Title"] = "Add Soldier";
 }
 
-<h1>Add Soldier</h1>
+@if (SignInManager.IsSignedIn(User))
+{
+    <h1>Add Soldier</h1>
 
-<div class="form-container">
-    <form action="/" class="add-person-form" method="post">
-        <input type="text" name="last-name" id="last-name" value="" required placeholder="Enter last name" /><br />
-        <input type="text" name="first-name" id="first-name" value="" required placeholder="Enter first name" /><br />
-        <input type="text" name="rank" id="rank" value="" required placeholder="Enter rank" /><br />
-        <input type="text" name="dod-id" id="dod-id" value="" required placeholder="Enter DOD ID" /><br />
-        <input type="text" name="ssn" id="ssn" value="" required placeholder="Enter SSN" /><br />
-        <input type="text" name="company" id="company" value="" required placeholder="Enter company" /><br />
-        <input type="text" name="platoon" id="platoon" value="" required placeholder="Enter platoon" /><br />
-        <input type="text" name="date-arrived" id="date-arrived" value="" required placeholder="Enter date arrived" /><br />
-        <button>Submit</button>
-    </form>
-</div>
+    <div class="form-container">
+        <form action="/" class="add-person-form" method="post">
+            <input type="text" name="last-name" id="last-name" value="" required placeholder="Enter last name" /><br />
+            <input type="text" name="first-name" id="first-name" value="" required placeholder="Enter first name" /><br />
+            <input type="text" name="rank" id="rank" value="" required placeholder="Enter rank" /><br />
+            <input type="text" name="dod-id" id="dod-id" value="" required placeholder="Enter DOD ID" /><br />
+            <input type="text" name="ssn" id="ssn" value="" required placeholder="Enter SSN" /><br />
+            <input type="text" name="company" id="company" value="" required placeholder="Enter company" /><br />
+            <input type="text" name="platoon" id="platoon" value="" required placeholder="Enter platoon" /><br />
+            <input type="text" name="date-arrived" id="date-arrived" value="" required placeholder="Enter date arrived" /><br />
+            <button id="add-soldier-submit">Submit</button>
+        </form>
+    </div>
+}
+else
+{
+    <h3>Need to be logged in to view this page.</h3>
+}
