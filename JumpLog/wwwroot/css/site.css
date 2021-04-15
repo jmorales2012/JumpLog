@@ -1,6 +1,27 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+.section {
+    padding: 50px 300px;
+}
+
+.hero {
+    margin: 0;
+}
+
+.why {
+    background-color: lightblue;
+}
+
+.why-header {
+    padding: 30px;
+}
+
+.tracker {
+}
+
+
+
 
 .form-container {
     width: 600px;

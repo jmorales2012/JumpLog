@@ -1594,31 +1594,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jbd11\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/Users/josh/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jbd11\\OneDrive\\Documents\\MSSA_CAD\\CSC_395\\JumpLogTracker\\JumpLog\\JumpLog\\JumpLog.csproj",
+      "projectUniqueName": "/Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/JumpLog.csproj",
       "projectName": "JumpLog",
-      "projectPath": "C:\\Users\\jbd11\\OneDrive\\Documents\\MSSA_CAD\\CSC_395\\JumpLogTracker\\JumpLog\\JumpLog\\JumpLog.csproj",
-      "packagesPath": "C:\\Users\\jbd11\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jbd11\\OneDrive\\Documents\\MSSA_CAD\\CSC_395\\JumpLogTracker\\JumpLog\\JumpLog\\obj\\",
+      "projectPath": "/Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/JumpLog.csproj",
+      "packagesPath": "/Users/josh/.nuget/packages/",
+      "outputPath": "/Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\jbd11\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/josh/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1676,7 +1669,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
       }
     }
   }

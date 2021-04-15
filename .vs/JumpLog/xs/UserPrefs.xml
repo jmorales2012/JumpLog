@@ -1,6 +1,11 @@
 ﻿<Properties StartupConfiguration="{045E9BA4-7499-4C5D-BF13-0AFDC694FDBD}|Default">
   <MonoDevelop.Ide.ItemProperties.JumpLog PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="JumpLog/Views/Home/Index.cshtml">
+    <Files>
+      <File FileName="JumpLog/Views/Home/Index.cshtml" Line="16" Column="30" />
+      <File FileName="JumpLog/wwwroot/css/site.css" Line="17" Column="15" />
+      <File FileName="JumpLog/wwwroot/lib/bootstrap/dist/css/bootstrap.css" Line="213" Column="3" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -9,13 +14,13 @@
               <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True" />
-                <Node name="Shared" expanded="True" />
+                <Node name="Home" expanded="True">
+                  <Node name="Index.cshtml" selected="True" />
+                </Node>
               </Node>
               <Node name="wwwroot" expanded="True">
-                <Node name="js" expanded="True" />
+                <Node name="css" expanded="True" />
               </Node>
-              <Node name="app.db" selected="True" />
             </Node>
           </Node>
         </State>

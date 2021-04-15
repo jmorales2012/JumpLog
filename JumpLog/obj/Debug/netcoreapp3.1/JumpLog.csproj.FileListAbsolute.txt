@@ -186,3 +186,4 @@
 /Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/obj/Debug/netcoreapp3.1/JumpLog.dll
 /Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/obj/Debug/netcoreapp3.1/JumpLog.pdb
 /Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/obj/Debug/netcoreapp3.1/JumpLog.genruntimeconfig.cache
+/Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/bin/Debug/netcoreapp3.1/wwwroot/images/Airborne.jpg

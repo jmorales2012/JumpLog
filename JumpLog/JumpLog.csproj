@@ -17,4 +17,19 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.13" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Remove="wwwroot\images\Airborne.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="wwwroot\images\Airborne.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="wwwroot\images\Airborne.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>
