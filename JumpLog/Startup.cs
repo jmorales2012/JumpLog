@@ -12,6 +12,7 @@ using JumpLog.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Http;
 
 namespace JumpLog
 {
@@ -50,10 +51,14 @@ namespace JumpLog
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            // added built-in middleware for cookies to keep user logged in
+            app.UseCookiePolicy();
 
             app.UseAuthentication();
             app.UseAuthorization();
@@ -64,6 +69,20 @@ namespace JumpLog
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
+            });
+
+            app.Use(async (context, next) =>
+            {
+                if (context.Request.Path == "/contact")
+                {
+                    await context.Response.WriteAsync("Contact page under contruction...");
+                    await next.Invoke();
+                }
+            });
+
+            app.Run(async context =>
+            {
+                await context.Response.WriteAsync("\nPlease check back soon!");
             });
         }
     }
