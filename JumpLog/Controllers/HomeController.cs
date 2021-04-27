@@ -23,11 +23,6 @@ namespace JumpLog.Controllers
             return View();
         }
 
-        public IActionResult AddSoldier()
-        {
-            return View();
-        }
-
         public IActionResult AddJump()
         {
             return View();

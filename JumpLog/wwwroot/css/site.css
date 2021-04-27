@@ -1,7 +1,4 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-.section {
+﻿.section {
     padding: 50px 300px;
 }
 
@@ -20,39 +17,18 @@ for details on configuring this project to bundle and minify static web assets. 
 .tracker {
 }
 
-
-
-
 .form-container {
     width: 600px;
 }
 
-    .form-container input {
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
+.form-container input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 
 .add-person-form {
     width: 600px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 a.navbar-brand {
     white-space: normal;

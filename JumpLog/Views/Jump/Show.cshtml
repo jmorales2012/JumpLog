@@ -1,0 +1,31 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@model JumpLog.Models.Jump
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+    <div class="section tracker text-center">
+        <h1>Current Jump</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Jump Date</th>
+                    <th scope="col">Airfield</th>
+                    <th scope="col">Aircraft</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @await Html.PartialAsync("_JumpPartial")
+            </tbody>
+        </table>
+
+        <!-- using HTML helpers for links -->
+        @Html.ActionLink("Add New Jump", "Add", new { id = 3 })
+    </div>
+
+</body>
+</html>

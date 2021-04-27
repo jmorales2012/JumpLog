@@ -32,4 +32,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Soldier\" />
+    <Folder Include="Views\Jump\" />
+  </ItemGroup>
 </Project>

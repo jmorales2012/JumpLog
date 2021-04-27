@@ -170,8 +170,6 @@
 /Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/obj/Debug/netcoreapp3.1/JumpLog.TagHelpers.output.cache
 /Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/obj/Debug/netcoreapp3.1/JumpLog.RazorCoreGenerate.cache
 /Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ViewStart.cshtml.g.cs
-/Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/obj/Debug/netcoreapp3.1/Razor/Views/Home/AddJump.cshtml.g.cs
-/Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/obj/Debug/netcoreapp3.1/Razor/Views/Home/AddSoldier.cshtml.g.cs
 /Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs
 /Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Error.cshtml.g.cs
 /Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs
@@ -187,3 +185,9 @@
 /Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/obj/Debug/netcoreapp3.1/JumpLog.pdb
 /Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/obj/Debug/netcoreapp3.1/JumpLog.genruntimeconfig.cache
 /Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/bin/Debug/netcoreapp3.1/wwwroot/images/Airborne.jpg
+/Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/obj/Debug/netcoreapp3.1/Razor/Views/Soldier/Show.cshtml.g.cs
+/Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/obj/Debug/netcoreapp3.1/Razor/Views/Jump/Show.cshtml.g.cs
+/Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_SoldierPartial.cshtml.g.cs
+/Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/obj/Debug/netcoreapp3.1/Razor/Views/Soldier/Add.cshtml.g.cs
+/Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/obj/Debug/netcoreapp3.1/Razor/Views/Jump/Add.cshtml.g.cs
+/Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_JumpPartial.cshtml.g.cs

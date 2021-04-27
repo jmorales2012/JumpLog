@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace JumpLog
 {
@@ -28,6 +29,7 @@ namespace JumpLog
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlite(
                     Configuration.GetConnectionString("DefaultConnection")));
@@ -71,19 +73,25 @@ namespace JumpLog
                 endpoints.MapRazorPages();
             });
 
-            app.Use(async (context, next) =>
+            app.Run(async (context) =>
             {
-                if (context.Request.Path == "/contact")
-                {
-                    await context.Response.WriteAsync("Contact page under contruction...");
-                    await next.Invoke();
-                }
+                await context.Response.WriteAsync(
+                    "You did not match a configured route in here");
             });
 
-            app.Run(async context =>
-            {
-                await context.Response.WriteAsync("\nPlease check back soon!");
-            });
+            //app.Use(async (context, next) =>
+            //{
+            //    if (context.Request.Path == "/contact")
+            //    {
+            //        await context.Response.WriteAsync("Contact page under contruction...");
+            //        await next.Invoke();
+            //    }
+            //});
+
+            //app.Run(async context =>
+            //{
+            //    await context.Response.WriteAsync("\nPlease check back soon!");
+            //});
         }
     }
 }
