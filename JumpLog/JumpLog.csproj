@@ -35,5 +35,7 @@
   <ItemGroup>
     <Folder Include="Views\Soldier\" />
     <Folder Include="Views\Jump\" />
+    <Folder Include="Services\" />
+    <Folder Include="Validators\" />
   </ItemGroup>
 </Project>

@@ -1,12 +1,20 @@
-﻿@model JumpLog.Models.Soldier
+﻿@using Microsoft.AspNetCore.Identity
+@model JumpLog.Models.Soldier
 
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 
-<!DOCTYPE html>
-<html>
-<body>
+@{
+    ViewData["Title"] = "Delete Soldier";
+}
 
-    <div class="section tracker text-center">
-        <h1>Current Soldier</h1>
+@if (SignInManager.IsSignedIn(User))
+{
+<section class="section">
+    <h1>Delete Soldier</h1>
+    <h3>Are you sure?</h3>
+
+    <form asp-action="ActualDelete" asp-route-id="@ViewBag.Id">
         <table class="table">
             <thead>
                 <tr>
@@ -22,7 +30,6 @@
             </thead>
 
             <tbody>
-                @*@await Html.PartialAsync("_SoldierPartial")*@
                 <tr>
                     <td scope="col">@Model.LastName</td>
                     <td scope="col">@Model.FirstName</td>
@@ -31,17 +38,20 @@
                     <td scope="col">@Model.Ssn</td>
                     <td scope="col">@Model.Company</td>
                     <td scope="col">@Model.Platoon</td>
-                    <td scope="col">@Model.DateArrived.ToShortDateString()</td>
-                    <td scope="col">@Html.ActionLink($"Edit", "Edit", new { id = ViewBag.Id })</td>
-                    <td scope="col">@Html.ActionLink($"Delete", "Delete", new { id = ViewBag.Id })</td>
+                    <td scope="col">@Model.DateArrived</td>
                 </tr>
             </tbody>
         </table>
+        <button asp-action="All">Do Not Delete</button>
+        <input type="submit" value="Delete Soldier" />
+    </form>
 
-        <!-- using HTML helpers for links -->
-        @Html.ActionLink("Add New Soldier", "Add")
-        @Html.ActionLink("View All Soldiers", "All")
-    </div>
 
-</body>
-</html>
+</section>
+}
+else
+{
+    <section class="section text-center">
+        <h3>Need to be logged in to view this page.</h3>
+    </section>
+}

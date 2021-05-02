@@ -4,12 +4,19 @@ using System.Linq;
 using System.Threading.Tasks;
 using JumpLog.Models;
 using Microsoft.AspNetCore.Mvc;
+using JumpLog.Services;
 
 namespace JumpLog.Controllers
 {
     public class SoldierController : Controller
     {
-        // GET: /<controller>/
+        private ISoldierData Battalion;
+
+        public SoldierController(ISoldierData myService)
+        {
+            Battalion = myService;
+        }
+
         public IActionResult Index()
         {
             return Content("No soldier selected");
@@ -17,46 +24,84 @@ namespace JumpLog.Controllers
 
         public IActionResult Show(int id)
         {
-
-            // creating dummy data for models (will be replaced with database eventually)
-            Soldier soldier = new Soldier();
-            if (id == 1)
-            {
-                soldier.FirstName = "Alex";
-                soldier.LastName = "Williams";
-                soldier.Rank = "SGT";
-                soldier.DodId = "12345678";
-                soldier.Ssn = "432568901";
-                soldier.Company = "C";
-                soldier.Platoon = "1";
-                soldier.DateArrived = "3/21/2018";
-            }
-            else
-            {
-                soldier.FirstName = "James";
-                soldier.LastName = "Johnson";
-                soldier.Rank = "SPC";
-                soldier.DodId = "487594187";
-                soldier.Ssn = "741859632";
-                soldier.Company = "A";
-                soldier.Platoon = "1";
-                soldier.DateArrived = "2/11/2020";
-            }
-
             // using ViewData to set meta tag for page
             ViewData["Title"] = "Show Soldier";
 
-            return View(soldier);
+            if (id < 0 || id >= Battalion.SoldierList.Count)
+            {
+                return NotFound();
+            }
+            else
+            {
+                //ViewBag.SoldierList = Battalion.SoldierList;
+                ViewBag.Id = id;
+                return View(Battalion.SoldierList[id]);
+            }
         }
 
+        public IActionResult All()
+        {          
+            return View(Battalion.SoldierList);
+        }
+
+        [HttpGet]
         public IActionResult Add()
         {
-            // shows the "Add Soldier" page
-
             // using ViewData to set meta tag for page
             ViewData["Title"] = "Add Soldier";
-
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Add(Soldier soldier)
+        {
+            Battalion.SoldierList.Add(soldier);
+            //return Content($"Added new soldier with last name {soldier.LastName}!");
+            return View("All", Battalion.SoldierList);
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            //validate the id
+            if (id < 0 || id >= Battalion.SoldierList.Count)
+                return Content("invalid id!");
+
+            return View(Battalion.SoldierList[id]);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(int id, Soldier soldier)
+        {
+            Battalion.SoldierList[id].LastName = soldier.LastName;
+            Battalion.SoldierList[id].FirstName = soldier.FirstName;
+            Battalion.SoldierList[id].Rank = soldier.Rank;
+            Battalion.SoldierList[id].DodId = soldier.DodId;
+            Battalion.SoldierList[id].Ssn = soldier.Ssn;
+            Battalion.SoldierList[id].Company = soldier.Company;
+            Battalion.SoldierList[id].Platoon = soldier.Platoon;
+            Battalion.SoldierList[id].DateArrived = soldier.DateArrived;
+
+            return View("Show", Battalion.SoldierList[id]);
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            //validate the id
+            if (id < 0 || id >= Battalion.SoldierList.Count)
+                return Content("invalid id!");
+
+            ViewBag.Id = id;
+            return View(Battalion.SoldierList[id]);
+        }
+
+
+        [HttpPost]
+        public IActionResult ActualDelete(int id)
+        {
+            Battalion.SoldierList.RemoveAt(id);
+            return RedirectToAction("All", Battalion.SoldierList);
         }
     }
 }

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<JumpLog.Models.Soldier>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+    <div class="section tracker text-center">
+        <h1>All Soldiers</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Last</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Rank</th>
+                    <th scope="col">DOD ID</th>
+                    <th scope="col">SSN</th>
+                    <th scope="col">Company</th>
+                    <th scope="col">Platoon</th>
+                    <th scope="col">Date Arrived</th>
+                </tr>
+            </thead>
+
+            <tbody>
+            @{
+                int count = 0;
+                foreach (var soldier in Model)
+                {
+                @*@await Html.PartialAsync("_SoldierPartial")*@
+                <tr>
+                    <td scope="col">@soldier.LastName</td>
+                    <td scope="col">@soldier.FirstName</td>
+                    <td scope="col">@soldier.Rank</td>
+                    <td scope="col">@soldier.DodId</td>
+                    <td scope="col">@soldier.Ssn</td>
+                    <td scope="col">@soldier.Company</td>
+                    <td scope="col">@soldier.Platoon</td>
+                    <td scope="col">@soldier.DateArrived.ToShortDateString()</td>
+                    <td scope="col">@Html.ActionLink($"Edit", "Edit", new { id = count })</td>
+                    <td scope="col">@Html.ActionLink($"Delete", "Delete", new { id = count })</td>
+                </tr>
+                    count++;
+                }
+             }
+             </tbody>
+            </table>
+
+        <!-- using HTML helpers for links -->
+        @Html.ActionLink("Add New Soldier", "Add", new { id = 3 })
+    </div>
+
+</body>
+</html>

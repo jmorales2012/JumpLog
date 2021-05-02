@@ -14,6 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using JumpLog.Services;
 
 namespace JumpLog
 {
@@ -37,6 +38,8 @@ namespace JumpLog
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddMvc(x => x.EnableEndpointRouting = false);
+            services.AddSingleton<ISoldierData, SoldierData>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

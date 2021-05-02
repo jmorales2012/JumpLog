@@ -1,4 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Identity
+@model JumpLog.Models.Soldier
+
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
 
@@ -8,10 +10,17 @@
 
 @if (SignInManager.IsSignedIn(User))
 {
-    <section class="section">
-        <h1>Add Soldier</h1>
+<section class="section">
+    <h1>Add Soldier</h1>
 
-        <div class="form-container">
+    @using (Html.BeginForm())
+    {
+        @Html.EditorForModel()
+        <input type="submit" value="Add Soldier" />
+    }
+
+
+    @*<div class="form-container">
             <form action="/" class="add-person-form" method="post">
                 <input type="text" name="last-name" id="last-name" value="" required placeholder="Enter last name" /><br />
                 <input type="text" name="first-name" id="first-name" value="" required placeholder="Enter first name" /><br />
@@ -23,8 +32,8 @@
                 <input type="text" name="date-arrived" id="date-arrived" value="" required placeholder="Enter date arrived" /><br />
                 <button id="add-soldier-submit">Submit</button>
             </form>
-        </div>
-    </section>
+        </div>*@
+</section>
 }
 else
 {
