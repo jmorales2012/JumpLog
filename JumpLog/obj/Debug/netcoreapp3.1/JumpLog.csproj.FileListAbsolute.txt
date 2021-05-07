@@ -194,3 +194,6 @@
 /Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/obj/Debug/netcoreapp3.1/Razor/Views/Soldier/Show.cshtml.g.cs
 /Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/obj/Debug/netcoreapp3.1/Razor/Views/Soldier/Edit.cshtml.g.cs
 /Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/obj/Debug/netcoreapp3.1/Razor/Views/Soldier/Delete.cshtml.g.cs
+/Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/obj/Debug/netcoreapp3.1/Razor/Views/Jump/All.cshtml.g.cs
+/Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/obj/Debug/netcoreapp3.1/Razor/Views/Jump/Delete.cshtml.g.cs
+/Users/josh/Library/Mobile Documents/com~apple~CloudDocs/MSSA/CSC395/JumpLog/JumpLog/obj/Debug/netcoreapp3.1/Razor/Views/Jump/Edit.cshtml.g.cs

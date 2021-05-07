@@ -1,9 +1,11 @@
 ﻿<Properties StartupConfiguration="{045E9BA4-7499-4C5D-BF13-0AFDC694FDBD}|Default">
   <MonoDevelop.Ide.ItemProperties.JumpLog PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="JumpLog/Views/Jump/Add.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="JumpLog/Views/Shared/_Layout.cshtml">
     <Files>
-      <File FileName="JumpLog/Views/Jump/Add.cshtml" Line="1" Column="1" />
-      <File FileName="JumpLog/Views/Soldier/Add.cshtml" Line="20" Column="6" />
+      <File FileName="JumpLog/Controllers/SoldierController.cs" Line="28" Column="48" />
+      <File FileName="JumpLog/Controllers/JumpController.cs" Line="96" Column="50" />
+      <File FileName="JumpLog/Startup.cs" Line="38" Column="67" />
+      <File FileName="JumpLog/Views/Shared/_Layout.cshtml" Line="29" Column="108" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,13 +14,14 @@
             <Node name="JumpLog" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
               <Node name="Services" expanded="True" />
               <Node name="Validators" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Jump" expanded="True">
-                  <Node name="Add.cshtml" selected="True" />
+                <Node name="Jump" expanded="True" />
+                <Node name="Shared" expanded="True">
+                  <Node name="_Layout.cshtml" selected="True" />
                 </Node>
-                <Node name="Shared" expanded="True" />
                 <Node name="Soldier" expanded="True" />
               </Node>
             </Node>

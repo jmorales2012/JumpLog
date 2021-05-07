@@ -40,6 +40,7 @@ namespace JumpLog
             services.AddRazorPages();
             services.AddMvc(x => x.EnableEndpointRouting = false);
             services.AddSingleton<ISoldierData, SoldierData>();
+            services.AddSingleton<IJumpData, JumpData>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,0 +1,48 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model JumpLog.Models.Jump
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@{
+    ViewData["Title"] = "Delete Jump";
+}
+
+@if (SignInManager.IsSignedIn(User))
+{
+<section class="section">
+    <h1>Delete Jump</h1>
+    <h3>Are you sure?</h3>
+
+    <form asp-action="ActualDelete" asp-route-id="@ViewBag.Id">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Aircraft</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td scope="col">@Model.Date.ToShortDateString()</td>
+                    <td scope="col">@Model.Location</td>
+                    <td scope="col">@Model.Aircraft</td>
+
+                </tr>
+            </tbody>
+        </table>
+        <button asp-action="All">Do Not Delete</button>
+        <input type="submit" value="Delete Jump" />
+    </form>
+
+
+</section>
+}
+else
+{
+    <section class="section text-center">
+        <h3>Need to be logged in to view this page.</h3>
+    </section>
+}

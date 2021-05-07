@@ -1,0 +1,42 @@
+﻿@model IEnumerable<JumpLog.Models.Jump>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+    <div class="section tracker text-center">
+        <h1>All Jumps</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Aircraft</th>
+                </tr>
+            </thead>
+
+            <tbody>
+            @{
+                int count = 0;
+                foreach (var jump in Model)
+                {
+                <tr>
+                    <td scope="col">@jump.Date.ToShortDateString()</td>
+                    <td scope="col">@jump.Location</td>
+                    <td scope="col">@jump.Aircraft</td>
+                    <td scope="col">@Html.ActionLink($"Edit", "Edit", new { id = count })</td>
+                    <td scope="col">@Html.ActionLink($"Delete", "Delete", new { id = count })</td>
+                </tr>
+                    count++;
+                }
+             }
+             </tbody>
+            </table>
+
+        <!-- using HTML helpers for links -->
+        @Html.ActionLink("Add New Jump", "Add", new { id = 3 })
+    </div>
+
+</body>
+</html>
